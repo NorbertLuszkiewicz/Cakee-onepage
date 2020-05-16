@@ -125,6 +125,7 @@ body{
     justify-content: center;
     min-height: 60vh;
     margin: auto;
+    padding: 50px 0 50px;
 
     &__img{
         margin-top: 50px;
@@ -154,7 +155,7 @@ body{
 
     
     @media (min-width: 800px) {
-        padding: 50px 0 50px;
+        padding: 0;
         .container{
             height: 100vh;
             display: flex;
