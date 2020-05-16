@@ -1,6 +1,6 @@
 # Cakee onepage
 
-[Link to site](https://norbertluszkiewicz.github.io/SchoolGradingCalculator./)
+[Link to site](https://norbertluszkiewicz.github.io/Cakee-onepage/)
 
 ## Available Scripts
 
