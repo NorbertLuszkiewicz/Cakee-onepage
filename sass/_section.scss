@@ -1,0 +1,528 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:  #f9f8fd;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.container{
+    width: 90vw;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.btn{
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: $this-orange;
+    border: 3px solid $this-orange;
+    box-shadow: 1px 1px 2px 0.5px  #444;
+    transition: background-color .5s,
+                color .5s;
+    cursor: pointer;
+
+    &--darkblue{
+        background-color: $this-darkblue;
+        border: 3px solid $this-darkblue;
+        display: block;
+        margin: auto;
+    }
+
+    &--green{
+        background-color: $this-green;
+        border: 3px solid $this-green;
+        margin: 10px 0;
+
+    }
+
+    &--red{
+        background-color: $this-red;
+        border: 3px solid $this-red;
+        display: block;
+        margin: 30px auto;
+    }
+}
+
+.btn:hover{
+    color: $this-orange;
+    background-color: transparent;
+    border: 3px solid $this-orange;
+    box-shadow: none;
+    text-shadow: 0.5px 0.5px #fff;
+}
+
+.btn--darkblue:hover{
+    color: $this-darkblue;
+    border: 3px solid $this-darkblue;
+
+}
+
+.btn--green:hover{
+    color: $this-green;
+    border: 3px solid $this-green;
+
+}
+
+.btn--red:hover{
+    color: $this-red;
+    border: 3px solid $this-red;
+
+}
+
+
+.text-box{
+    @include center;
+    flex-flow: column;
+    padding: 20px 0;
+    text-align: center;
+
+    &__title{
+        padding: 20px 0;
+        font-size: 4rem;
+
+        &--small{
+            font-size: 3rem;
+        }
+    }
+    
+    &__text{
+        padding-bottom: 20px;
+        max-width: 600px;
+    }
+
+    
+}
+
+
+
+.home{
+    background: url(../public/images/strawberry-in-yogurt.jpg);
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__title{
+        font-size: 3rem;
+    }
+
+    &__text{
+        max-width: 380px;
+        margin: 30px 0 50px;
+        letter-spacing: 1px;
+        line-height: 140%;
+    }
+}
+
+.about{
+    background: #00BDBD;
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-width: 60vw;
+    margin: auto;
+
+
+    &__img{
+        margin-top: 50px;
+        width: 60vh;
+        max-width: 100%;
+        order: -1;
+    }
+
+    &__text-box{
+        max-width: 500px;
+        margin: auto;
+    }
+
+    &__title{
+        font-size: 3rem;
+        margin: 15px 0;
+    }
+
+    &__text{
+        max-width: 500px;
+        letter-spacing: 1px;
+        line-height: 140%;
+        padding-bottom: 50px;
+    }
+
+
+
+    
+    @media (min-width: 800px) {
+        .container{
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: row;
+            align-items: center;
+        }
+    }
+
+}
+
+
+.services{
+    background:$this-sky-blue ;
+    margin:auto;
+    min-height: 70vh;
+    padding: 50px 0;
+    display: flex;
+    flex-flow: column;
+
+    &__title{
+        font-size: 4rem;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        background-image:url(../public/images/tomatos-parts.png) ;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item-box{
+        display: flex;
+        flex-flow: row;
+        margin: 15px auto;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 3px 3px 8px -3px  #444;
+        max-width: 485px;
+         @media (min-width: 800px) {
+            max-width: 500px;
+        }
+    }
+
+    &__icon{
+        background: white;
+        height: 85px;
+        width: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        @media (min-width: 800px) {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+        }
+    }
+    &__icon--sized{
+        padding: 23px 19px;
+    }
+
+    &__item{
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 10px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        border-right: solid 1px #333;
+        width: 100%;
+        height: 85px;
+        max-width: 400px;
+        @media (min-width: 800px) {
+            height: 100px;
+        }
+    }
+
+
+}
+
+.gallery{
+    background:$this-yellow;
+    padding: 50px 0 50px;
+
+    &__img-box{
+        padding-bottom: 40px;
+        @media (min-width: 800px) {
+            display: grid;
+            grid-template-columns:repeat(6, 1fr) ;
+            gap: 20px;
+            grid-template-areas:
+            "big big big big small-1 small-1"
+            "big big big big small-1 small-1"
+            "big big big big small-2 small-2"
+            "big big big big small-2 small-2"
+            "medium-1 medium-1 medium-1 medium-2 medium-2 medium-2"
+            "medium-1 medium-1 medium-1 medium-2 medium-2 medium-2";
+
+            padding:40px 0;
+        }
+
+    }
+
+    &__img{
+        margin:10px 0;
+        width: 100%;
+        box-shadow: 3px 3px 8px -3px  #444;
+        cursor: pointer;
+        @media (min-width: 800px) {
+            margin: 0;
+        }
+
+
+        &--big{
+            grid-area: big;
+        }
+
+        &--small-1{
+            grid-area: small-1;
+        }
+
+        &--small-2{
+            grid-area: small-2;
+        }
+
+        &--medium-1{
+            grid-area: medium-1;
+        }
+
+        &--medium-2{
+            grid-area: medium-2;
+        }
+    }
+
+
+
+
+}
+
+.subscribe{
+    background:url(../public/images/subscribeBG.png) ;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0;
+
+    &__title{
+        font-size: 3rem;
+    }
+
+    &__text{
+        max-width: 350px;
+        padding: 20px 0 ;
+    }
+
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    &__email{
+        width: 90vw;
+        max-width: 600px;
+        margin-right: 20px;
+        font-size: 1.3rem;
+        padding: 15px;
+        margin: 10px 10px 10px 0;
+    }
+}
+
+.blog{
+    background-color:#B07CF7 ;
+    color: white;
+    padding: 50px 0 50px;
+    min-height: 70vh;
+    
+    &__item-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+
+    &__item{
+        position: relative;
+        display: flex;
+        margin: 15px ;
+        max-width: 350px;
+        height: 300px;
+        flex-flow: column;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        &-1{
+            background:url(../public/images/blog-1.png);
+            background-position: center;
+        }
+        &-2{
+            background:url(../public/images/blog-2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &-3{
+            background:url(../public/images/blog-3.png);
+            background-position: center;
+        }
+    }
+
+    &__date{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 20px;
+        padding:4px 7px;
+        width: 60px;
+        text-align: center;
+        background: rgba($color: #000000, $alpha: 0.45);
+        border-radius: 5px;
+    }
+
+    &__gradient{
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+       display: flex;
+       flex-flow: column;
+       justify-content: flex-end;
+    }
+
+    &__name{
+        font-size: 1.4rem;
+        width: 85%;
+        margin: 10px auto;
+        text-decoration: none;
+        font-weight: 700;
+        color: white;
+        transition: .3s;
+    }
+
+    &__name:hover{
+        color:#ecb246;
+    }
+
+    &__author{
+        color: rgba($color:#fff, $alpha: 0.9);
+        width: 85%;
+        margin: 5px auto 15px;
+    }
+
+}
+
+.contact{
+    background: url(../public/images/contact-bg.png) ;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0 50px;
+
+    &__wrapper{
+        @include center;
+        flex-flow: column;
+        @media (min-width: 800px) {
+            flex-flow: row;
+        }
+    }
+
+    &__text-wrapper{
+        margin: 20px auto;
+        width: 300px;
+        @media (min-width: 800px) {
+            margin:0 0 0 120px;
+            align-self: flex-start;
+        }
+    }
+
+    &__text-strong{
+        margin: 5px 0 ;
+    }
+
+    &__text{
+        margin-bottom: 15px;
+    }
+
+    &__form{
+        max-width: 500px;
+        @media (min-width: 800px) {
+            order: -1;
+        }
+        
+    }
+
+    &__form-item{
+        font-family: 'Raleway', sans-serif;
+        width: 100%;
+        font-size: 1rem;
+        padding: 15px;
+        border: none;
+        border-left: 4px solid rgba(0, 196, 196, 0);
+        background-color: rgba(0, 196, 196, 0.5);
+        margin: 8px 0;
+    }
+
+    &__form-item::placeholder{
+        color: white;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    &__form-item:focus{
+        border-left: 4px solid rgba(0, 120, 120, 1);
+        background: rgba(0, 196, 196, 1);
+    }
+
+    &__message{
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+.footer{
+    background: #262626;
+    
+    color:white;
+    
+    @media (min-width: 800px) {
+        height: 80px;
+    }
+
+    &__wrapper{
+        @include center;
+        flex-flow: column;
+        padding: 25px 0;
+        @media (min-width: 800px) {
+            @include center;
+            justify-content: space-between;
+            flex-flow: row;
+            padding: 13px 0;
+        }
+    }
+
+    &__text{
+        padding-top: 6px;
+        &--red{
+            color: red;
+        }
+    }
+
+    &__logo{
+        font-size: 1.6rem;
+        font-family: Pacifico;
+        font-weight: 400;
+        padding-top: 6px;
+        color: #aaa;
+        text-decoration: none;
+    }
+
+    &__link{
+        color: #aaa;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    &__link:hover, &__logo:hover{
+        color: rgba(0, 196, 196, 1);
+    }
+}

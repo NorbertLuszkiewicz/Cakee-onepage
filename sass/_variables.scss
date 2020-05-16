@@ -1,0 +1,19 @@
+$container: 90vh;
+$this-orange:#FF6033;
+$this-red:#F72B3B;
+$this-darkblue:#5585A2;
+$this-green:#96B92C;
+$this-sky-blue:#70BFFF;
+$this-yellow: #FFE930;
+
+
+@mixin width-container {
+    width: 90vw;
+    max-width: 1200px;
+  }
+
+  @mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
