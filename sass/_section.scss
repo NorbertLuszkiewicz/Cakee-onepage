@@ -129,9 +129,13 @@ body{
 
     &__img{
         margin-top: 50px;
-        width: 50vw;
+        width:85vw ;
         max-width: 100%;
         order: -1;
+
+        @media (min-width: 800px) {
+            width: 42vw;
+        }
     }
 
     &__text-box{
